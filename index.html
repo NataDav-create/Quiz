@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic-ext"
+        rel="stylesheet" />
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="flex-wrap: wrap;">
+    <!-- Card 01 -->
+    <div class="plate">
+        <div class="cover-content-wrapper">
+            <div class="cover-content">
+                <div class="title">
+                    How much will it cost to deliver your cargo anywhere in the world for 2-14 days
+                </div>
+                <p>
+                    Do not waste time to search for transport, do not be afraid for safety and calmly do your business
+                    while your cargo on the way.
+                </p>
+                <a href="#" class="button" data-nav="next">Answer the questions</a>
+            </div>
+        </div>
+    </div>
+    <!-- // Card 01 -->
+
+    <!-- Card 02 -->
+    <div class="plate hidden">
+        <!-- Content ... -->
+        <div class="plate-content">
+            <h2 class="title-main">What kind of cargo do you want to transport?</h2>
+            <div class="checkbox-group">
+                <!-- checkbox-block -->
+                <label class="checkbox-block">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Furniture
+                    </div>
+                </label>
+                <!-- // checkbox-block -->
+                <!-- checkbox-block -->
+                <label class="checkbox-block checkbox-block--active">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Electronical devices
+                    </div>
+                </label>
+                <!-- // checkbox-block -->
+                <!-- checkbox-block -->
+                <label class="checkbox-block">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Machine tools and Industrial equipment
+                    </div>
+                </label>
+                <!-- // checkbox-block -->
+                <!-- checkbox-block -->
+                <label class="checkbox-block">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Clothes
+                    </div>
+                </label>
+                <!-- checkbox-block -->
+                <label class="checkbox-block">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Cars and parts
+                    </div>
+                </label>
+                <!-- checkbox-block -->
+                <label class="checkbox-block">
+                    <input type="checkbox" name="radio-group" class="checkbox-block__real" />
+                    <div class="checkbox-block__fake"></div>
+                    <div class="checkbox-block__text">
+                        Dangerous cargo
+                    </div>
+                </label>
+                <!-- // checkbox-block -->
+            </div>
+        </div>
+
+        <!-- plate-footer -->
+        <div class="plate-footer">
+            <div class="plate-footer__progress">
+                <div class="progress">
+                    <div class="progress__label">
+                        Готово: <strong>56%</strong>
+                    </div>
+                    <div class="progress__line-wrapper">
+                        <div class="progress__line-bar" style="width: 56%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="plate-footer__buttons">
+                <a href="#" class="button button--back" data-nav="prev">Назад</a>
+                <a href="#" class="button" data-nav="next">Далее</a>
+            </div>
+        </div>
+        <!-- // plate-footer -->
+    </div>
+    <!-- // Card 02 -->
+
+
+    <!-- Card 03 -->
+    <div class="plate hidden">
+
+        <!-- Content ... -->
+        <div class="plate-content">
+            <h2 class="title-main">How urgently it needs to be transported?</h2>
+            <div class="radio-group">
+                <!-- radio-block -->
+                <label class="radio-block">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        Right now
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block radio-block--active">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        1-3 days
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        4-5 days
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        5-10 days
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        more the 10 days
+                    </div>
+                </label>
+                <!-- // radio-block -->
+
+            </div>
+        </div>
+
+        <!-- plate-footer -->
+        <div class="plate-footer">
+            <div class="plate-footer__progress">
+                <div class="progress">
+                    <div class="progress__label">
+                        Готово: <strong>56%</strong>
+                    </div>
+                    <div class="progress__line-wrapper">
+                        <div class="progress__line-bar" style="width: 56%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="plate-footer__buttons">
+                <a href="#" class="button button--back" data-nav="prev">Назад</a>
+                <a href="#" class="button" data-nav="next">Далее</a>
+            </div>
+        </div>
+        <!-- // plate-footer -->
+    </div>
+    <!-- // Card 03 -->
+
+    <!-- Card 04 -->
+    <div class="plate hidden">
+
+        <!-- Content ... -->
+        <div class="plate-content">
+            <h2 class="title-main">Do you want to complete your documents by yourself?</h2>
+            <div class="radio-group radio-group--small">
+                <!-- radio-block -->
+                <label class="radio-block radio-block--small">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        Yes
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block radio-block--active radio-block--small">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        No
+                    </div>
+                </label>
+                <!-- // radio-block -->
+
+            </div>
+        </div>
+
+        <!-- plate-footer -->
+        <div class="plate-footer">
+            <div class="plate-footer__progress">
+                <div class="progress">
+                    <div class="progress__label">
+                        Готово: <strong>56%</strong>
+                    </div>
+                    <div class="progress__line-wrapper">
+                        <div class="progress__line-bar" style="width: 56%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="plate-footer__buttons">
+                <a href="#" class="button button--back" data-nav="prev">Назад</a>
+                <a href="#" class="button" data-nav="next">Далее</a>
+            </div>
+        </div>
+        <!-- // plate-footer -->
+    </div>
+    <!-- // Card 04 -->
+
+    <!-- Card 05 -->
+    <div class="plate hidden">
+        <!-- Content ... -->
+        <div class="plate-content">
+            <h2 class="title-main">Do you want to be involved in the project?</h2>
+            <div class="radio-group">
+                <!-- radio-block -->
+                <label class="radio-block radio-block--big">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        Yes, I want to solve all issues
+                    </div>
+                </label>
+                <!-- // radio-block -->
+                <!-- radio-block -->
+                <label class="radio-block radio-block--active radio-block--big">
+                    <input type="radio" name="radio-group" class="radio-block__real" />
+                    <div class="radio-block__fake"></div>
+                    <div class="radio-block__text">
+                        No, I want to transfer and receive the goods on time without any questions
+                    </div>
+                </label>
+                <!-- // radio-block -->
+
+            </div>
+        </div>
+
+        <!-- plate-footer -->
+        <div class="plate-footer">
+            <div class="plate-footer__progress">
+                <div class="progress">
+                    <div class="progress__label">
+                        Готово: <strong>56%</strong>
+                    </div>
+                    <div class="progress__line-wrapper">
+                        <div class="progress__line-bar" style="width: 56%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="plate-footer__buttons">
+                <a href="#" class="button button--back" data-nav="prev">Назад</a>
+                <a href="#" class="button" data-nav="next">Далее</a>
+            </div>
+        </div>
+        <!-- // plate-footer -->
+    </div>
+    <!-- // Card 05 -->
+
+    <!-- Card 06 -->
+    <div class="plate hidden">
+        <div class="cover-content-wrapper">
+            <div class="cover-content">
+                <div class="title">Excellent! Almost done!</div>
+
+                <div class="form-group">
+                    <label class="label" for="email">Your Email:</label>
+                    <input class="input-email" type="email" id="email" placeholder="Your Email" />
+                </div>
+
+                <input class="button button--huge" type="submit" value="Получить результаты" data-nav="next" />
+
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox__real" />
+                    <div class="checkbox__fake"></div>
+                    <div class="checkbox__text">
+                        I agree to Privacy Policy
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- // Card 06 -->
+
+    <!-- Card 07 -->
+    <div class="plate hidden">
+        <div class="cover-content-wrapper">
+            <div class="cover-content">
+                <div class="title">Thank you!</div>
+                <p>
+                    Take care of important matters and business development, and entrust us with the delievery of your
+                    cargo
+                </p>
+                <div class="title-2">We offer:</div>
+                <div class="bonus-cards-wrapper">
+                    <div class="bonus-card">
+                        <div class="bonus-card__title">
+                            First order discount
+                        </div>
+                    </div>
+                    <div class="bonus-card">
+                        <div class="bonus-card__title">
+                            Discount for long destinations
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 07 -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

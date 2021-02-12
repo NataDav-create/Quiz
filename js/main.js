@@ -150,3 +150,13 @@ document.querySelectorAll('.radio-group').forEach(item => {
     }
   });
 })
+
+document.querySelectorAll('label.checkbox-block input[type="checkbox"]').forEach(item => {
+  item.addEventListener('change', function () {
+    if (item.checked) {
+      item.closest('label').classList.add('checkbox-block--active');
+    } else {
+      item.closest('label').classList.remove('checkbox-block--active');
+    }
+  })
+})

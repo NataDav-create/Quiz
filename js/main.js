@@ -10,12 +10,14 @@ const btnNext = document.querySelectorAll('[data-nav="next"]');
 btnNext.forEach(button => {
   button.addEventListener('click', function () {
     const thisCard = this.closest('[data-card]');
+    const thisCardNumber = parseInt(thisCard.dataset.card);
 
     if (thisCard.dataset.validate == 'novalidate') {
       console.log('novalidate');
       navigate('next', thisCard);
     } else {
       console.log('validate');
+      saveAnswer(thisCardNumber, gatherCardData(thisCardNumber))
       navigate('next', thisCard);
     }
   });
@@ -64,9 +66,35 @@ function gatherCardData(number) {
     }
   })
 
+  let checkBoxValues = currentCard.querySelectorAll('[type="checkbox"]');
+  checkBoxValues.forEach(item => {
+    if (item.checked) {
+      result.push({
+        name: item.name,
+        value: item.value
+      })
+    }
+  });
+
+  let inputValues = currentCard.querySelectorAll('[type="text"], [type="number"], [type="email"]');
+  inputValues.forEach(item => {
+    let itemValue = item.value;
+    if (itemValue.trim() != '') {
+      result.push({
+        name: item.name,
+        value: item.value
+      });
+    }
+  })
+
   let data = {
     question: question,
     answer: result
   }
+  console.log(data)
   return data;
+}
+
+function saveAnswer(number, data) {
+  answers[number] = data;
 }

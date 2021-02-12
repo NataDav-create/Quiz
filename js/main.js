@@ -13,14 +13,14 @@ btnNext.forEach(button => {
     const thisCardNumber = parseInt(thisCard.dataset.card);
 
     if (thisCard.dataset.validate == 'novalidate') {
-      console.log('novalidate');
       navigate('next', thisCard);
+      updateProgressBar('next', thisCardNumber);
     } else {
-      console.log('validate');
       saveAnswer(thisCardNumber, gatherCardData(thisCardNumber));
 
       if (isFilled(thisCardNumber) && checkOnRequired(thisCardNumber)) {
         navigate('next', thisCard);
+        updateProgressBar('next', thisCardNumber);
       } else {
         alert('please answer before next step');
       }
@@ -34,7 +34,10 @@ const btnPrev = document.querySelectorAll('[data-nav="prev"]');
 btnPrev.forEach(button => {
   button.addEventListener('click', function () {
     const thisCard = this.closest('[data-card]');
+    const thisCardNumber = parseInt(thisCard.dataset.card);
+
     navigate('prev', thisCard);
+    updateProgressBar('prev', thisCardNumber);
   })
 });
 
@@ -96,7 +99,6 @@ function gatherCardData(number) {
     question: question,
     answer: result
   }
-  console.log(data)
   return data;
 }
 
@@ -160,3 +162,25 @@ document.querySelectorAll('label.checkbox-block input[type="checkbox"]').forEach
     }
   })
 })
+
+function updateProgressBar(direction, cardNumber) {
+  let cardsTotalNumber = document.querySelectorAll('[data-card]').length;
+
+  if (direction == 'next') {
+    cardNumber = cardNumber + 1;
+  } else if (direction == 'prev') {
+    cardNumber = cardNumber - 1;
+  }
+
+  let progress = ((cardNumber * 100) / cardsTotalNumber).toFixed();
+
+  let progressBar = document.querySelector(`[data-card="${cardNumber}"]`)
+    .querySelector('.progress');
+
+  if (progressBar) {
+    progressBar.querySelector('.progress__label strong')
+      .innerText = `${progress}%`;
+    progressBar.querySelector('.progress__line-bar')
+      .style = `width: ${progress}%`;
+  }
+}

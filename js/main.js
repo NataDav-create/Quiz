@@ -17,8 +17,13 @@ btnNext.forEach(button => {
       navigate('next', thisCard);
     } else {
       console.log('validate');
-      saveAnswer(thisCardNumber, gatherCardData(thisCardNumber))
-      navigate('next', thisCard);
+      saveAnswer(thisCardNumber, gatherCardData(thisCardNumber));
+
+      if (isFilled(thisCardNumber) && checkOnRequired(thisCardNumber)) {
+        navigate('next', thisCard);
+      } else {
+        alert('please answer before next step');
+      }
     }
   });
 });
@@ -97,4 +102,39 @@ function gatherCardData(number) {
 
 function saveAnswer(number, data) {
   answers[number] = data;
+}
+
+function isFilled(number) {
+  if (answers[number].answer.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validateEmail(email) {
+  let pattern = /^[\w-\.]+@[\w]+\.[a-z]{2,4}$/i;
+  return pattern.test(email);
+}
+
+function checkOnRequired(number) {
+  let currentCard = document.querySelector(`[data-card="${number}"]`);
+  let requiredFields = currentCard.querySelectorAll('[required]');
+  let isValidArray = [];
+  requiredFields.forEach(item => {
+    if (item.type == 'checkbox' && item.checked == false) {
+      isValidArray.push(false);
+    } else if (item.type == 'email') {
+      if (validateEmail(item.value)) {
+        isValidArray.push(true);
+      } else {
+        isValidArray.push(false);
+      }
+    }
+  });
+  if (isValidArray.indexOf(false) == -1) {
+    return true;
+  } else {
+    return false;
+  }
 }

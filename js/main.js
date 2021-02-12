@@ -138,3 +138,15 @@ function checkOnRequired(number) {
     return false;
   }
 }
+
+document.querySelectorAll('.radio-group').forEach(item => {
+  item.addEventListener('click', function (e) {
+    let label = e.target.closest('label');
+    if (label) {
+      label.closest('.radio-group').querySelectorAll('label').forEach(item => {
+        item.classList.remove('radio-block--active');
+      });
+      label.classList.add('radio-block--active');
+    }
+  });
+})

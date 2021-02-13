@@ -1288,4 +1288,53 @@ body::before {
 .strong {
   font-weight: 700;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(60, 55, 75, 0.5);
+}
+
+.modal__dialog {
+  max-width: 500px;
+  margin: 40px auto
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  max-height: 80vh;
+  overflow-y: auto
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase
+}
+
+.modal .btn {
+  display: block;
+  width: 280px;
+  margin: 0 auto
+}
+
+.show {
+  display: flex
+}
+
+.hide {
+  display: none
 }

@@ -22,13 +22,27 @@ btnNext.forEach(button => {
         navigate('next', thisCard);
         updateProgressBar('next', thisCardNumber);
       } else {
-        alert('please answer before next step');
+        showAlertMessage();
       }
     }
   });
 });
 
-
+function showAlertMessage() {
+  const alertMessage = document.createElement("div");
+  alertMessage.classList.add("modal");
+  alertMessage.innerHTML = `
+    <div class="modal__dialog">
+    <div class="modal__content">
+    <div class="modal__title">please answer before next step</div>
+    </div>
+    </div>
+    `;
+  document.body.append(alertMessage);
+  setTimeout(() => {
+    alertMessage.remove();
+  }, 2000);
+}
 
 const btnPrev = document.querySelectorAll('[data-nav="prev"]');
 btnPrev.forEach(button => {

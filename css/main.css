@@ -258,7 +258,7 @@ body::before {
 }
 
 .progress__label {
-  color: #0f1d34;
+  color: #fefefe;
   font-size: 16px;
   margin-bottom: 10px;
 }
